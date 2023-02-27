@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipped background</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        section{
+            background: #343434;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            z-index: -1;
+            position: absolute;
+        }
+        
+
+        .mainbox{
+            display: flex;
+            justify-content: space-around;
+            color:#fff;
+        }
+
+        .mainbox .box{
+            width:250px;
+            padding: 85px 20px;
+            margin:0 20px;
+            background: linear-gradient(99deg,#242424 50%,#000000 50%);
+            position: relative;
+            transition: 1s;
+            
+        }
+
+        
+
+        .mainbox .box:hover h1{
+            top:20%;
+            transition: 1s;
+        }
+        
+
+        .mainbox .box:before{
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            z-index: -1;
+            background: linear-gradient( red, #ffeb00);
+            transform: skew(1deg, 1deg);
+        }
+            
+        
+
+        .mainbox .box h1{
+            font-size: 10rem;
+            position: absolute;
+            margin: auto;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #7877744f;
+            transition: 1s;
+
+        }
+
+        
+
+        .mainbox .box h3{
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .mainbox .box p{
+            line-height:28px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="mainbox">
+                <div><div class="box"><h1>01</h1><h3>Service One</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis repellendus architecto minima, sit quas totam obcaecati? </p></div></div>
+                <div><div class="box"><h1>02</h1><h3>Service Two</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis repellendus architecto minima, sit quas totam obcaecati? </p></div></div>
+                <div><div class="box"><h1>03</h1><h3>Service Three</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis repellendus architecto minima, sit quas totam obcaecati? </p></div></div>
+                <div><div class="box"><h1>04</h1><h3>Service Four</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis repellendus architecto minima, sit quas totam obcaecati? </p></div></div>
+            
+        </div>
+
+        
+    </section>
+    
+
+</body>
+</html>

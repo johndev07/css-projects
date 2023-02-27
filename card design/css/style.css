@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f8ff;
+}
+
+.container {
+  margin: 0 40px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wrapper {
+  width: 300px;
+  padding: 25px;
+  background: #0187ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  position: relative;
+  height: 108px;
+  transition: 2s;
+}
+
+.wrapper h3 {
+  color: #fff;
+}
+
+.wrapper p {
+  color: #fff;
+  margin: 10px 0;
+}
+
+.img-container {
+  height: 250px;
+  border: 5px solid #fff;
+  border-radius: 7px;
+}
+
+.wrapper img {
+  width: 101%;
+  height: 101%;
+  object-fit: cover;
+  object-position: center;
+  margin-top: -1px;
+  margin-left: -1px;
+  border-radius: 7px;
+}
+
+.wrapper button.hire {
+  width: 110px;
+  height: 30px;
+  margin-top: 20px;
+  background: #fff;
+  box-shadow: 0px 1px 9px 0 #4d4d4d;
+  margin-bottom: 4px;
+  border: none;
+  border-radius: 36px;
+}
+
+.wrapper button.toogle {
+  background: #0187ff;
+  color: #fff;
+  font-size: 25px;
+  border: none;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  position: absolute;
+  bottom: -25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.wrapper button.toogle::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 0px;
+  border-top-right-radius: 12px;
+  left: -24px;
+  background: #fff;
+  box-shadow: 3px -19px 0 3px #0187ff;
+}
+
+.wrapper button.toogle::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 0px;
+  border-top-left-radius: 12px;
+  right: -24px;
+  background: #fff;
+  box-shadow: -3px -19px 0 3px #0187ff;
+}
+
+.wrapper.active {
+  height: 430px;
+  transition: 2s;
+}
+
+.bottom-cover {
+  height: 25px;
+  width: 100%;
+  background: #0187ff;
+  position: absolute;
+  bottom: 0;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.wrapper .toogle i {
+  transition: 2s;
+}
+
+.btnrotate {
+  transform: rotate(180deg);
+  transition: 2s;
+}

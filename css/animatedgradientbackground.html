@@ -1,0 +1,62 @@
+.<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+
+      body{
+          background-color:#000;
+      }
+      .box{
+        width:200px;
+        height:150px;
+        background-color:#000;
+        margin:auto;
+        position:relative;
+
+      }
+
+      .box:before,.box:after{
+        content:'';
+        height:calc(100% + 4px);
+        top:-2px;
+        left:-2px;
+        background: linear-gradient(45deg,#ff00dc,#ffe,#ffe406,#00e,#ff0000,#09ff52);
+        width:calc(100% + 4px);
+        position:absolute;
+        background-size:400%;
+        z-index:-1;
+        animation:animate 20s linear infinite;
+
+      }
+
+      .box:after{
+        filter:blur(20px);
+
+      }
+
+      @keyframes animate{
+        0%{
+          background-position:0 0;
+        }
+
+        50%{
+          background-position:400% 0;
+        }
+
+        100%{
+            background-position:0 0;
+        }
+
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+
+    </div>
+  </body>
+</html>

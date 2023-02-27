@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Wavy border</title>
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      display:flex;
+      min-height:100vh;
+      justify-content:center;
+      align-items:center;
+      background-color:#000;
+      color:#fff;
+    }
+
+    .box{
+      width:240px;
+      text-align:justify;
+      position:relative;
+      padding:50px;
+      margin:10px;
+      -webkit-box-reflect:below 15px linear-gradient(transparent,transparent,transparent,transparent,#000);
+
+    }
+
+    .box:before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      width:90%;
+
+      height:100%;
+      filter:url(#wavy);
+      border:4px solid #fff;
+    }
+
+    .box p{
+      line-height:30px;
+      word-spacing:1px;
+    }
+
+
+
+  </style>
+  </head>
+  <body>
+
+        <div class="container">
+          <div class="box">
+            <h2>Water Wave Div</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum blanditiis
+              temporibus sint dolor neque natus iure voluptatum cum, officia, fuga nisi
+               aperiam impedit. Voluptate voluptatem sapiente quaerat asperiores accusamus
+                sunt?Lorem ipsum</p>
+          </div>
+        </div>
+        <svg>
+            <filter id="wavy">
+                    <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
+                      <animate attributeName="baseFrequency" dur="60s" values="0.02;0.05;0.02" repeatCount="indefinite">
+                    </feTurbulence>
+                    <feDisplacementMap in="SourceGraphic" scale="30"/>
+
+
+            </filter>
+
+        </svg>
+  </body>
+</html>

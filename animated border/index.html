@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body{
+        background-color:#1e1e44;
+      }
+      .box{
+        width:350px;
+        height:350px;
+        padding:15px;
+        text-align:center;
+        background-color:#2e2e2e;
+        color:#fff;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+
+      }
+
+      .box p{
+        line-height:26px;
+        margin:0 25px;
+        text-align:justify;
+      }
+      .box span{
+        width:100%;
+        height:100%;
+        position:absolute;
+        display:block;
+        left:0;
+        top:0;
+      }
+
+      .box span:before{
+        content: '';
+        width: 100%;
+        height: 2px;
+        left: 0px;
+        position: absolute;
+        animation:animate 4s linear infinite;
+        background-color: #eead00;
+
+      }
+
+      .box span:nth-child(2){
+        transform:rotate(90deg);
+
+      }
+
+      .box span:nth-child(3){
+          transform:rotate(180deg);
+
+        }
+
+        .box span:nth-child(4){
+          transform:rotate(270deg);
+        }
+
+        .box span:nth-child(2):before{
+          animation-delay: -2s;
+        }
+
+        .box span:nth-child(4):before{
+          animation-delay: -2s;
+        }
+
+      @keyframes animate{
+        0%{
+            transform:scaleX(0);
+            transform-origin:left 0px;
+
+        }
+        50%{
+          transform:scaleX(1);
+          transform-origin:left;
+
+        }
+
+        50.1%{
+            transform:scaleX(1);
+            transform-origin:right;
+
+                }
+
+        100%{
+          transform:scaleX(0);
+          transform-origin:right;
+            }
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <h2>I AM WEIRED</h2>
+        <p>
+            Hello My Text make no sense i am writing here bullshit just to make this thing look good i dont care about whether you read or not all the best
+            but this text is not enought to fit my box so i am writing some to fill the box.
+        </p>
+    </div>
+  </body>
+</html>

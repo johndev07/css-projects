@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>serial buld</title>
+    <style>
+      body{
+        background: radial-gradient(#00ffdc, #000000);
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-size: 100%;
+    background-position: center;
+    padding-top: 20px;
+    overflow: hidden;
+      }
+  ul{
+    white-space:nowrap;
+  }
+
+      ul li{
+        list-style-type: none;
+    display: inline-block;
+    width: 15px;
+    height: 36px;
+    margin: 0 56px 0 0;
+    border-radius: 50%;
+    background-color: #faaf26;
+    animation:la 1s infinite linear;
+    box-shadow: 0px 6px 26px 4px #faaf26;
+      }
+
+      ul li:before{
+        content: '';
+    position: absolute;
+    width: 15px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 3px;
+      }
+
+
+      ul li:nth-child(odd){
+        background-color:#09ff3e;
+        animation:lb 1s infinite linear;
+        box-shadow: 0px 6px 26px 4px #09ff3eba;
+      }
+
+      @keyframes la{
+
+        0%{
+          background-color:#faaf26;
+        }
+
+        100%{
+
+            background-color:#09ff3e;
+        }
+      }
+
+
+            @keyframes lb{
+
+              0%{
+                background-color:#09ff3e;
+              }
+
+              100%{
+
+                  background-color:#faaf26;
+              }
+            }
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+
+  </body>
+</html>

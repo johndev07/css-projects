@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Skewed scroll</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    section {
+      width: 100%;
+      height: 100vh;
+      background: url('https://wallpapercave.com/wp/wp2570989.jpg');
+    }
+
+    .skid {
+      width: 100%;
+      height: 100vh;
+      display: block;
+      transform: skewY(-7deg);
+      transform-origin: top left;
+      background-color: #fff;
+    }
+  </style>
+
+</head>
+
+<body>
+  <section>
+  </section>
+  <span class="skid"></span>
+  <script>
+    var skewed = document.querySelector('.skid');
+    window.addEventListener('scroll', function() {
+      var value = -10 + window.scrollY / 60;
+      console.log(value);
+      skewed.style.transform = "skewY(" + value + "deg)";
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #434750;
+  overflow: hidden;
+}
+
+.grid-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.grid-container div {
+  border-radius: 5px;
+  background-color: #818080;
+  padding: 25px;
+  color: #fff;
+}
+.grid-column-2 {
+  grid-column: span 2;
+}
+
+.grid-row-2 {
+  grid-row: span 2;
+}
+
+.grid-container div h3 {
+  color: rgb(255 233 0);
+}
+
+.grid-container div p {
+  color: #fff;
+  line-height: 25px;
+}
